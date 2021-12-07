@@ -32,6 +32,9 @@ namespace _1
             //}
             //Console.WriteLine(count);
 
+
+
+
             //PART TWO
 
             //a = i
@@ -39,14 +42,17 @@ namespace _1
             //c = i+2
             //sum = (a+b+c)
 
-            for (int i = 0; i < list.Length - 1; i++)
+            for (int i = 0; i < list.Length - 3; i++)
             {
-                int sum = (list[i]) + (list[i + 1]) + (list[i + 2]);
-                Console.WriteLine(sum);
+                int sum1 = (list[i]) + (list[i + 1]) + (list[i + 2]);
+                int sum2 = (list[i + 1]) + (list[i + 2]) + (list[i + 3]);
 
-
+                if (sum1 < sum2)
+                {
+                    count++;
+                }
             }
-            
+            Console.WriteLine(count);
         }
     }
 }
